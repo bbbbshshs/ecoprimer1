@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0e1311">
+<title>EcoPrimer Construções | Construção, Reforma e Obras em Geral</title>
+<meta name="description" content="Construtora especializada em construção, reforma e obras em geral: residencial, comercial e industrial. Orçamento grátis em 24h.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+tailwind.config = {
+  theme: { extend: {
+    fontFamily: { sans: ['Plus Jakarta Sans','system-ui','sans-serif'] },
+    colors: { brand: { dark:'#0e1311', card:'#161d19', border:'#24312a' } },
+    boxShadow: { 'glow-green':'0 0 25px -5px rgba(16,185,129,.4)' }
+  }}
+}
+</script>
+<style>
+  *{ -webkit-tap-highlight-color:transparent; }
+  html{ scroll-padding-top:100px; }
+  body{ background:#0e1311; color:#f3f4f6; font-family:'Plus Jakarta Sans',system-ui,sans-serif; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+  img{ display:block; max-width:100%; height:auto; }
+  .img-cover{
+    width:100%; height:100%; object-fit:cover; object-position:center;
+    background-color:#141a16;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(16,185,129,.08) 0, transparent 45%),
+      radial-gradient(circle at 80% 70%, rgba(217,119,6,.06) 0, transparent 45%),
+      linear-gradient(135deg, #161d19 0%, #0e1311 100%);
+  }
+  .img-cover-hover{ transition: transform .6s cubic-bezier(.4,0,.2,1); }
+  .group:hover .img-cover-hover{ transform: scale(1.06); }
+  .ar-4-3{ aspect-ratio:4/3; } .ar-16-10{ aspect-ratio:16/10; }
+  .glass-panel{ background:rgba(22,29,25,.75); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border:1px solid rgba(255,255,255,.08); }
+  .glass-card{ background:linear-gradient(135deg,rgba(26,36,30,.8),rgba(18,24,20,.9)); border:1px solid rgba(255,255,255,.07); transition:all .3s; }
+  .glass-card:hover{ border-color:rgba(16,185,129,.4); transform:translateY(-4px); box-shadow:0 12px 30px -10px rgba(0,0,0,.5),0 0 20px -5px rgba(16,185,129,.2); }
+  .gold-gradient-text{ background:linear-gradient(135deg,#fbbf24,#d97706,#f59e0b); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  .green-gradient-text{ background:linear-gradient(135deg,#34d399,#10b981,#059669); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  .gold-border-glow{ border:1px solid rgba(217,119,6,.3); box-shadow:0 0 15px rgba(217,119,6,.15); }
+  ::-webkit-scrollbar{ width:8px; } ::-webkit-scrollbar-track{ background:#0e1311; } ::-webkit-scrollbar-thumb{ background:#24312a; border-radius:4px; } ::-webkit-scrollbar-thumb:hover{ background:#10b981; }
+  :focus-visible{ outline:2px solid #10b981; outline-offset:3px; border-radius:6px; }
+  .reveal{ opacity:0; transform:translateY(24px); transition:opacity .7s,transform .7s; }
+  .reveal.is-visible{ opacity:1; transform:translateY(0); }
+  @keyframes wa-pulse{ 0%{box-shadow:0 0 0 0 rgba(16,185,129,.6);} 70%{box-shadow:0 0 0 18px rgba(16,185,129,0);} 100%{box-shadow:0 0 0 0 rgba(16,185,129,0);} }
+  .wa-pulse{ animation:wa-pulse 2.2s infinite; }
+  @keyframes marquee{ 0%{transform:translateX(0);} 100%{transform:translateX(-50%);} }
+  .marquee-track{ display:inline-flex; animation:marquee 25s linear infinite; }
+  #navbar.is-scrolled{ background:rgba(9,12,10,.92); backdrop-filter:blur(20px); }
+  #navbar.is-scrolled .nav-inner{ height:64px; } .nav-inner{ transition:height .3s; }
+  .field-invalid{ border-color:#ef4444 !important; } .field-valid{ border-color:#10b981 !important; }
+</style>
+</head>
+<body class="antialiased selection:bg-emerald-500 selection:text-white">
+
+<div class="fixed top-0 left-0 right-0 z-[60] bg-gradient-to-r from-emerald-700 via-emerald-600 to-emerald-700 text-white text-[11px] sm:text-xs py-1.5 overflow-hidden">
+  <div class="marquee-track whitespace-nowrap">
+    <span class="mx-6 inline-flex items-center gap-2"><i data-lucide="zap" class="w-3.5 h-3.5"></i><strong>Resposta em até 24h</strong> · Orçamento 100% gratuito · (27) 99923-0084</span>
+    <span class="mx-6 inline-flex items-center gap-2"><i data-lucide="zap" class="w-3.5 h-3.5"></i><strong>Resposta em até 24h</strong> · Orçamento 100% gratuito · (27) 99923-0084</span>
+  </div>
+</div>
+
+<header id="navbar" class="fixed top-[28px] left-0 right-0 z-50 transition-all duration-300 glass-panel border-b border-emerald-950/40">
+  <div class="nav-inner max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <a href="#inicio" class="flex items-center gap-3">
+      <div class="relative w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-950 via-brand-card to-zinc-900 border border-emerald-500/40 p-2 flex items-center justify-center shadow-lg">
+        <i data-lucide="home" class="w-6 h-6 text-emerald-400 absolute"></i>
+        <i data-lucide="leaf" class="w-4 h-4 text-amber-500 absolute -bottom-1 -right-1 fill-amber-500"></i>
+      </div>
+      <div class="flex flex-col">
+        <span class="text-xl font-extrabold text-white">ECO<span class="gold-gradient-text">PRIMER</span></span>
+        <span class="text-[10px] tracking-widest text-emerald-400 font-semibold uppercase -mt-1">CONSTRUÇÕES</span>
+      </div>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+      <a href="#inicio" class="text-emerald-400">Início</a>
+      <a href="#sobre" class="text-zinc-300 hover:text-emerald-400 transition-colors">Sobre</a>
+      <a href="#servicos" class="text-zinc-300 hover:text-emerald-400 transition-colors">Serviços</a>
+      <a href="#projetos" class="text-zinc-300 hover:text-emerald-400 transition-colors">Projetos</a>
+      <a href="#processo" class="text-zinc-300 hover:text-emerald-400 transition-colors">Como Funciona</a>
+      <a href="#faq" class="text-zinc-300 hover:text-emerald-400 transition-colors">FAQ</a>
+      <a href="#contato" class="text-zinc-300 hover:text-emerald-400 transition-colors">Contato</a>
+    </nav>
+    <div class="hidden lg:flex">
+      <a href="#orcamento" class="inline-flex items-center px-6 py-2.5 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-emerald-600 to-emerald-500 shadow-glow-green border border-emerald-400/30">
+        <i data-lucide="calculator" class="w-4 h-4 mr-2"></i>Orçamento Grátis
+      </a>
+    </div>
+    <button id="mobileMenuBtn" aria-label="Menu" class="md:hidden p-2 rounded-lg text-zinc-300"><i data-lucide="menu" id="menuIcon" class="w-7 h-7"></i></button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden glass-panel border-t border-zinc-800/80 px-6 py-6 space-y-1">
+    <a href="#inicio" class="mobile-link block text-emerald-400 font-medium py-3 border-b border-zinc-800/50">Início</a>
+    <a href="#sobre" class="mobile-link block text-zinc-300 py-3 border-b border-zinc-800/50">Sobre</a>
+    <a href="#servicos" class="mobile-link block text-zinc-300 py-3 border-b border-zinc-800/50">Serviços</a>
+    <a href="#projetos" class="mobile-link block text-zinc-300 py-3 border-b border-zinc-800/50">Projetos</a>
+    <a href="#processo" class="mobile-link block text-zinc-300 py-3 border-b border-zinc-800/50">Como Funciona</a>
+    <a href="#faq" class="mobile-link block text-zinc-300 py-3 border-b border-zinc-800/50">FAQ</a>
+    <a href="#contato" class="mobile-link block text-zinc-300 py-3">Contato</a>
+    <div class="pt-4"><a href="#orcamento" class="mobile-link flex items-center justify-center w-full py-3.5 rounded-xl font-semibold text-white bg-gradient-to-r from-emerald-600 to-emerald-500"><i data-lucide="calculator" class="w-4 h-4 mr-2"></i>Quero Orçamento</a></div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="inicio" class="relative pt-44 pb-20 md:pt-52 md:pb-32 overflow-hidden bg-gradient-to-b from-brand-dark via-emerald-950/20 to-brand-dark">
+  <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+  <div class="absolute top-1/3 right-10 w-[300px] h-[300px] bg-amber-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border-emerald-500/30 text-emerald-400 text-xs sm:text-sm font-semibold">
+          <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-ping"></span>
+          <i data-lucide="hard-hat" class="w-4 h-4"></i> CONSTRUÇÃO · REFORMA · OBRAS EM GERAL
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.15]">
+          Sua obra do <span class="green-gradient-text">início ao fim</span>, com qualidade e <span class="gold-gradient-text">prazo garantido</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-zinc-300 max-w-2xl font-light leading-relaxed mx-auto lg:mx-0">
+          Fazemos todo tipo de obra: construção residencial, comercial e industrial, reformas completas, ampliações e projetos sob medida. Do alicerce ao acabamento, com tecnologia, eficiência e responsabilidade.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+          <a href="https://wa.me/5527999230084?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-emerald-600 via-emerald-500 to-emerald-600 shadow-glow-green">
+            <i data-lucide="message-square" class="w-5 h-5 mr-3"></i>Quero Orçamento Grátis
+          </a>
+          <a href="#projetos" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl font-bold text-zinc-200 glass-card">
+            <i data-lucide="eye" class="w-5 h-5 mr-2 text-emerald-400"></i>Ver Nossos Projetos
+          </a>
+        </div>
+        <div class="pt-6 border-t border-zinc-800/80 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center lg:text-left">
+          <div class="p-2"><div class="text-2xl sm:text-3xl font-extrabold text-white">100+</div><div class="text-xs text-zinc-400 mt-1">Obras Entregues</div></div>
+          <div class="p-2"><div class="text-2xl sm:text-3xl font-extrabold text-emerald-400">15+</div><div class="text-xs text-zinc-400 mt-1">Anos de Experiência</div></div>
+          <div class="p-2"><div class="text-2xl sm:text-3xl font-extrabold text-amber-400">100%</div><div class="text-xs text-zinc-400 mt-1">Prazo Cumprido</div></div>
+          <div class="p-2"><div class="text-2xl sm:text-3xl font-extrabold text-white">10 anos</div><div class="text-xs text-zinc-400 mt-1">Garantia Estrutural</div></div>
+        </div>
+      </div>
+      <div class="lg:col-span-5 relative">
+        <div class="relative mx-auto max-w-md lg:max-w-none">
+          <div class="glass-card rounded-3xl p-6 sm:p-8 gold-border-glow relative z-10 overflow-hidden">
+            <div class="relative z-10 space-y-6">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center border border-emerald-500/40"><i data-lucide="building-2" class="w-5 h-5 text-emerald-400"></i></div>
+                  <div><div class="text-xs text-zinc-400">Padrão EcoPrimer</div><div class="text-sm font-bold text-white">Obra Completa</div></div>
+                </div>
+                <span class="px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-semibold rounded-full border border-amber-500/30">Premium</span>
+              </div>
+              <div class="relative rounded-2xl overflow-hidden border border-zinc-700/60 ar-16-10 group">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80"
+                     alt="Residência EcoPrimer" width="800" height="500" loading="eager" fetchpriority="high" decoding="async"
+                     class="img-cover img-cover-hover" onerror="this.onerror=null;this.style.display='none';">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-zinc-200 glass-panel px-3 py-2 rounded-lg">
+                  <span class="flex items-center gap-1.5 font-medium"><i data-lucide="zap" class="w-3.5 h-3.5 text-amber-400"></i> Obra Entregue</span>
+                  <span class="text-emerald-400 font-bold">100% Concluído</span>
+                </div>
+              </div>
+              <div class="space-y-3">
+                <div class="flex items-center justify-between text-xs"><span class="text-zinc-400">Satisfação dos Clientes</span><span class="text-emerald-400 font-bold">98%</span></div>
+                <div class="w-full bg-zinc-800 rounded-full h-1.5 overflow-hidden"><div class="bg-emerald-500 h-1.5 rounded-full" style="width: 98%"></div></div>
+                <div class="flex items-center justify-between text-xs"><span class="text-zinc-400">Obras Entregues no Prazo</span><span class="text-amber-400 font-bold">100%</span></div>
+                <div class="w-full bg-zinc-800 rounded-full h-1.5 overflow-hidden"><div class="bg-amber-500 h-1.5 rounded-full" style="width: 100%"></div></div>
+              </div>
+              <div class="pt-2 flex items-center justify-between text-xs text-zinc-400 border-t border-zinc-800">
+                <span class="flex items-center gap-1"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Equipe Própria e Qualificada</span>
+                <span class="text-zinc-300 font-semibold">Garantia de 10 Anos</span>
+              </div>
+            </div>
+          </div>
+          <div class="absolute -bottom-6 -left-6 glass-panel p-4 rounded-2xl hidden sm:flex items-center gap-3 z-20 border-emerald-500/30 shadow-2xl">
+            <div class="p-3 bg-emerald-500/20 text-emerald-400 rounded-xl"><i data-lucide="award" class="w-6 h-6"></i></div>
+            <div><div class="text-xs text-zinc-400">Selo de Qualidade</div><div class="text-sm font-bold text-white">Construtora Verificada</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="py-24 bg-zinc-950 border-t border-zinc-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="reveal">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="space-y-4">
+            <div class="rounded-2xl overflow-hidden border border-zinc-800 ar-4-3">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
+                   alt="Obra residencial EcoPrimer" width="600" height="450" loading="lazy" decoding="async"
+                   class="img-cover img-cover-hover" onerror="this.onerror=null;this.style.display='none';">
+            </div>
+            <div class="rounded-2xl overflow-hidden border border-zinc-800 ar-4-3">
+              <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80"
+                   alt="Projeto e engenharia EcoPrimer" width="600" height="450" loading="lazy" decoding="async"
+                   class="img-cover img-cover-hover" onerror="this.onerror=null;this.style.display='none';">
+            </div>
+          </div>
+          <div class="space-y-4 pt-8">
+            <div class="rounded-2xl overflow-hidden border border-zinc-800 ar-4-3">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80"
+                   alt="Interior reformado" width="600" height="450" loading="lazy" decoding="async"
+                   class="img-cover img-cover-hover" onerror="this.onerror=null;this.style.display='none';">
+            </div>
+            <div class="glass-card p-6 rounded-2xl flex flex-col justify-center border-amber-500/30">
+              <i data-lucide="hard-hat" class="w-8 h-8 text-emerald-400 mb-2"></i>
+              <span class="text-2xl font-bold text-white">Obra Completa</span>
+              <span class="text-xs text-zinc-400 mt-1">Do projeto à entrega das chaves.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="space-y-6 reveal">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/60 text-emerald-400 text-xs font-semibold border border-emerald-500/30">
+          <i data-lucide="compass" class="w-4 h-4"></i> SOBRE A ECOPRIMER
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Construímos, reformamos e <span class="green-gradient-text">entregamos qualquer tipo de obra</span>.</h2>
+        <p class="text-zinc-300 leading-relaxed font-light">A <strong class="text-white font-semibold">ECOPRIMER CONSTRUÇÕES</strong> é uma construtora completa. Atuamos desde pequenas reformas residenciais até grandes obras comerciais e industriais, sempre com equipe própria, materiais certificados e gestão profissional de cada etapa.</p>
+        <p class="text-zinc-400 leading-relaxed font-light text-sm">Com mais de 15 anos de experiência, unimos engenharia de qualidade, tecnologia e responsabilidade para entregar obras que duram — no prazo e dentro do orçamento combinado.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+          <div class="flex items-start gap-3 glass-panel p-4 rounded-xl border-zinc-800">
+            <div class="p-2 bg-emerald-500/20 text-emerald-400 rounded-lg shrink-0"><i data-lucide="cpu" class="w-5 h-5"></i></div>
+            <div><h4 class="text-sm font-bold text-white">Engenharia BIM</h4><p class="text-xs text-zinc-400 mt-0.5">Modelagem 3D precisa, sem sobras.</p></div>
+          </div>
+          <div class="flex items-start gap-3 glass-panel p-4 rounded-xl border-zinc-800">
+            <div class="p-2 bg-amber-500/20 text-amber-400 rounded-lg shrink-0"><i data-lucide="users" class="w-5 h-5"></i></div>
+            <div><h4 class="text-sm font-bold text-white">Equipe Própria</h4><p class="text-xs text-zinc-400 mt-0.5">Sem terceirização, sem surpresas.</p></div>
+          </div>
+        </div>
+        <div class="p-4 rounded-xl bg-gradient-to-r from-emerald-950/40 to-transparent border-l-4 border-emerald-500 text-sm text-zinc-300 italic">
+          "Cada obra é única. Tratamos cada projeto como se fosse nossa própria casa."
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos" class="py-24 bg-brand-dark">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto space-y-4 mb-16 reveal">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-950/50 text-amber-400 text-xs font-semibold border border-amber-500/30"><i data-lucide="layers" class="w-4 h-4"></i> NOSSOS SERVIÇOS</div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Todo tipo de obra, <span class="gold-gradient-text">reforma e construção</span></h2>
+      <p class="text-zinc-400 font-light">Soluções completas "Chave na Mão" (Turnkey) para residências, comércios, indústrias e terrenos de qualquer porte.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="glass-card rounded-2xl p-8 flex flex-col justify-between group reveal">
+        <div class="space-y-4">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400"><i data-lucide="home" class="w-7 h-7"></i></div>
+          <h3 class="text-xl font-bold text-white">Construção Residencial</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">Casas de alto padrão, sobrados, condomínios e residências em alvenaria, Steel Frame ou Wood Frame.</p>
+        </div>
+        <div class="pt-6 mt-6 border-t border-zinc-800/80 flex items-center justify-between text-xs font-semibold text-emerald-400"><span>Casas & Sobrados</span><i data-lucide="arrow-right" class="w-4 h-4"></i></div>
+      </div>
+      <div class="glass-card rounded-2xl p-8 flex flex-col justify-between group reveal">
+        <div class="space-y-4">
+          <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400"><i data-lucide="hammer" class="w-7 h-7"></i></div>
+          <h3 class="text-xl font-bold text-white">Reformas & Ampliações</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">Reformas residenciais e comerciais, ampliações, retrofit e modernização de imóveis antigos.</p>
+        </div>
+        <div class="pt-6 mt-6 border-t border-zinc-800/80 flex items-center justify-between text-xs font-semibold text-amber-400"><span>Reforma Completa</span><i data-lucide="arrow-right" class="w-4 h-4"></i></div>
+      </div>
+      <div class="glass-card rounded-2xl p-8 flex flex-col justify-between group reveal">
+        <div class="space-y-4">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400"><i data-lucide="building-2" class="w-7 h-7"></i></div>
+          <h3 class="text-xl font-bold text-white">Obras Comerciais & Industriais</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">Lojas, galpões, escritórios, restaurantes e plantas industriais com cronograma acelerado.</p>
+        </div>
+        <div class="pt-6 mt-6 border-t border-zinc-800/80 flex items-center justify-between text-xs font-semibold text-emerald-400"><span>Comércio & Indústria</span><i data-lucide="arrow-right" class="w-4 h-4"></i></div>
+      </div>
+      <div class="glass-card rounded-2xl p-8 flex flex-col justify-between group reveal">
+        <div class="space-y-4">
+          <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400"><i data-lucide="pen-tool" class="w-7 h-7"></i></div>
+          <h3 class="text-xl font-bold text-white">Projetos Arquitetônicos & Engenharia</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">Projetos arquitetônicos, estruturais e complementares com acompanhamento técnico completo.</p>
+        </div>
+        <div class="pt-6 mt-6 border-t border-zinc-800/80 flex items-center justify-between text-xs font-semibold text-amber-400"><span>Projeto Completo</span><i data-lucide="arrow-right" class="w-4 h-4"></i></div>
+      </div>
+      <div class="glass-card rounded-2xl p-8 flex flex-col justify-between group reveal">
+        <div class="space-y-4">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400"><i data-lucide="paint-roller" class="w-7 h-7"></i></div>
+          <h3 class="text-xl font-bold text-white">Acabamento & Manutenção</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">Pintura, revestimentos, marcenaria, gesso, elétrica, hidráulica e manutenção predial.</p>
+        </div>
+        <div class="pt-6 mt-6 border-t border-zinc-800/80 flex items-center justify-between text-xs font-semibold text-emerald-400"><span>Acabamento Premium</span><i data-lucide="arrow-right" class="w-4 h-4"></i></div>
+      </div>
+      <div class="glass-card rounded-2xl p-8 flex flex-col justify-between group reveal">
+        <div class="space-y-4">
+          <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400"><i data-lucide="sun" class="w-7 h-7"></i></div>
+          <h3 class="text-xl font-bold text-white">Energia Solar & Eficiência</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">Instalação de sistemas fotovoltaicos, aquecimento solar e soluções de eficiência energética.</p>
+        </div>
+        <div class="pt-6 mt-6 border-t border-zinc-800/80 flex items-center justify-between text-xs font-semibold text-amber-400"><span>Energia Limpa</span><i data-lucide="arrow-right" class="w-4 h-4"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFÓLIO -->
+<section id="projetos" class="py-24 bg-zinc-950 border-t border-b border-zinc-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 reveal">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/60 text-emerald-400 text-xs font-semibold border border-emerald-500/30 mb-3"><i data-lucide="layout-grid" class="w-4 h-4"></i> NOSSO PORTFÓLIO</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Obras em Destaque</h2>
+      </div>
+      <div class="flex flex-wrap gap-2" id="portfolioTabs">
+        <button data-filter="all" class="tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-emerald-600 text-white shadow-glow-green">Todos</button>
+        <button data-filter="residencial" class="tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all glass-card text-zinc-400">Residencial</button>
+        <button data-filter="comercial" class="tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all glass-card text-zinc-400">Comercial</button>
+        <button data-filter="reforma" class="tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all glass-card text-zinc-400">Reformas</button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectsGrid">
+      <article class="project-item residencial glass-card rounded-2xl overflow-hidden group reveal">
+        <div class="relative ar-16-10 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Casa Residencial" width="800" height="500" loading="lazy" decoding="async" class="img-cover img-cover-hover" onerror="this.onerror=null;this.style.display='none';">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent pointer-events-none"></div>
+          <span class="absolute top-4 left-4 px-3 py-1 bg-emerald-500/90 text-white text-xs font-bold rounded-full backdrop-blur-md">Residencial</span>
+        </div>
+        <div class="p-6 space-y-3"><h3 class="text-xl font-bold text-white">Casa Residencial de Alto Padrão</h3><p class="text-xs text-zinc-400 leading-relaxed">Residência unifamiliar de 380m² com estrutura em concreto armado, acabamento premium e automação.</p><div class="flex flex-wrap gap-2 pt-2"><span class="text-[10px] bg-emerald-950 text-emerald-400 px-2.5 py-1 rounded-md border border-emerald-800/40">Alto Padrão</span><span class="text-[10px] bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded-md">Automação</span><span class="text-[10px] bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded-md">Piscina</span></div></div>
+      </article>
+
+      <article class="project-item comercial glass-card rounded-2xl overflow-hidden group reveal">
+        <div class="relative ar-16-10 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Edifício Comercial" width="800" height="500" loading="lazy" decoding="async" class="img-cover img-cover-hover" onerror="this.onerror=null;this.style.display='none';">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent pointer-events-none"></div>
+          <span class="absolute top-4 left-4 px-3 py-1 bg-amber-500/90 text-white text-xs font-bold rounded-full backdrop-blur-md">Comercial</span>
+        </div>
+        <div class="p-6 space-y-3"><h3 class="text-xl font-bold text-white">Edifício Corporativo</h3><p class="text-xs text-zinc-400 leading-relaxed">Complexo de escritórios com fachada em vidro, sistema de climatização central e elevadores de alta velocidade.</p><div class="flex flex-wrap gap-2 pt-2"><span class="text-[10px] bg-amber-950 text-amber-400 px-2.5 py-1 rounded-md border border-amber-800/40">Corporativo</span><span class="text-[10px] bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded-md">Fachada de Vidro</span></div></div>
+      </article>
+
+      <article class="project-item comercial glass-card rounded-2xl overflow-hidden group reveal">
+        <div class="relative ar-16-10 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80" alt="Galpão Industrial" width="800" height="500" loading="lazy" decoding="async" class="img-cover img-cover-hover" onerror="this.onerror=null;this.style.display='none';">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent pointer-events-none"></div>
+          <span class="absolute top-4 left-4 px-3 py-1 bg-emerald-500/90 text-white text-xs font-bold rounded-full backdrop-blur-md">Industrial</span>
+        </div>
+        <div class="p-6 space-y-3"><h3 class="text-xl font-bold text-white">Galpão Industrial</h3><p class="text-xs text-zinc-400 leading-relaxed">Estrutura metálica de 1.200m² para planta industrial, com pé-direito alto e piso de alta resistência.</p><div class="flex flex-wrap gap-2 pt-2"><span class="text-[10px] bg-emerald-950 text-emerald-400 px-2.5 py-1 rounded-md border border-emerald-800/40">1.200m²</span><span class="text-[10px] bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded-md">Estrutura Metálica</span></div></div>
+      </article>
+
+      <article class="project-item residencial glass-card rounded-2xl overflow-hidden group reveal">
+        <div class="relative ar-16-10 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Reforma Residencial" width="800" height="500" loading="lazy" decoding="async" class="img-cover img-cover-hover" onerror="this.onerror=null;this.style.display='none';">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent pointer-events-none"></div>
+          <span class="absolute top-4 left-4 px-3 py-1 bg-emerald-500/90 text-white text-xs font-bold rounded-full backdrop-blur-md">Residencial</span>
+        </div>
+        <div class="p-6 space-y-3"><h3 class="text-xl font-bold text-white">Reforma Residencial Completa</h3><p class="text-xs text-zinc-400 leading-relaxed">Reforma total de apartamento em 90 dias: elétrica, hidráulica, revestimentos e marcenaria.</p><div class="flex flex-wrap gap-2 pt-2"><span class="text-[10px] bg-emerald-950 text-emerald-400 px-2.5 py-1 rounded-md border border-emerald-800/40">Reforma Total</span><span class="text-[10px] bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded-md">Obra Rápida</span></div></div>
+      </article>
+
+      <article class="project-item reforma glass-card rounded-2xl overflow-hidden group reveal">
+        <div class="relative ar-16-10 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Retrofit Comercial" width="800" height="500" loading="lazy" decoding="async" class="img-cover img-cover-hover" onerror="this.onerror=null;this.style.display='none';">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent pointer-events-none"></div>
+          <span class="absolute top-4 left-4 px-3 py-1 bg-amber-500/90 text-white text-xs font-bold rounded-full backdrop-blur-md">Reforma</span>
+        </div>
+        <div class="p-6 space-y-3"><h3 class="text-xl font-bold text-white">Retrofit Comercial</h3><p class="text-xs text-zinc-400 leading-relaxed">Modernização completa de fachada e infraestrutura elétrica e hidráulica de edifício comercial.</p><div class="flex flex-wrap gap-2 pt-2"><span class="text-[10px] bg-amber-950 text-amber-400 px-2.5 py-1 rounded-md border border-amber-800/40">Retrofit</span><span class="text-[10px] bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded-md">Fachada Nova</span></div></div>
+      </article>
+
+      <article class="project-item reforma glass-card rounded-2xl overflow-hidden group reveal">
+        <div class="relative ar-16-10 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80&crop=entropy" alt="Ampliação e Energia Solar" width="800" height="500" loading="lazy" decoding="async" class="img-cover img-cover-hover" onerror="this.onerror=null;this.style.display='none';">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent pointer-events-none"></div>
+          <span class="absolute top-4 left-4 px-3 py-1 bg-emerald-500/90 text-white text-xs font-bold rounded-full backdrop-blur-md">Reforma</span>
+        </div>
+        <div class="p-6 space-y-3"><h3 class="text-xl font-bold text-white">Ampliação com Energia Solar</h3><p class="text-xs text-zinc-400 leading-relaxed">Ampliação residencial com instalação integrada de sistema fotovoltaico e aquecimento solar.</p><div class="flex flex-wrap gap-2 pt-2"><span class="text-[10px] bg-emerald-950 text-emerald-400 px-2.5 py-1 rounded-md border border-emerald-800/40">Ampliação</span><span class="text-[10px] bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded-md">Energia Solar</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section id="processo" class="py-24 bg-brand-dark">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto space-y-4 mb-16 reveal">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/60 text-emerald-400 text-xs font-semibold border border-emerald-500/30"><i data-lucide="route" class="w-4 h-4"></i> COMO FUNCIONA</div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Do primeiro contato à <span class="green-gradient-text">entrega das chaves</span></h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="glass-card rounded-2xl p-6 relative reveal"><div class="absolute -top-3 -left-3 w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center font-extrabold text-white text-sm shadow-glow-green">01</div><i data-lucide="message-square" class="w-8 h-8 text-emerald-400 mb-4 mt-2"></i><h3 class="text-base font-bold text-white mb-2">Briefing Gratuito</h3><p class="text-xs text-zinc-400 leading-relaxed">Conversamos sobre seu projeto, terreno, prazo e orçamento. Sem compromisso.</p></div>
+      <div class="glass-card rounded-2xl p-6 relative reveal"><div class="absolute -top-3 -left-3 w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center font-extrabold text-white text-sm shadow-glow-green">02</div><i data-lucide="pen-tool" class="w-8 h-8 text-emerald-400 mb-4 mt-2"></i><h3 class="text-base font-bold text-white mb-2">Projeto & Proposta</h3><p class="text-xs text-zinc-400 leading-relaxed">Projeto arquitetônico e proposta técnica-financeira detalhada.</p></div>
+      <div class="glass-card rounded-2xl p-6 relative reveal"><div class="absolute -top-3 -left-3 w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center font-extrabold text-white text-sm shadow-glow-green">03</div><i data-lucide="hammer" class="w-8 h-8 text-emerald-400 mb-4 mt-2"></i><h3 class="text-base font-bold text-white mb-2">Execução com App</h3><p class="text-xs text-zinc-400 leading-relaxed">Acompanhe em tempo real pelo app, com fotos e relatórios semanais.</p></div>
+      <div class="glass-card rounded-2xl p-6 relative reveal"><div class="absolute -top-3 -left-3 w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center font-extrabold text-white text-sm shadow-glow-green">04</div><i data-lucide="key" class="w-8 h-8 text-emerald-400 mb-4 mt-2"></i><h3 class="text-base font-bold text-white mb-2">Entrega & Garantia</h3><p class="text-xs text-zinc-400 leading-relaxed">Entrega no prazo com garantia estrutural de 10 anos e suporte pós-obra.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section id="diferenciais" class="py-24 bg-zinc-950 border-t border-zinc-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto space-y-4 mb-16 reveal">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/60 text-emerald-400 text-xs font-semibold border border-emerald-500/30"><i data-lucide="check-circle" class="w-4 h-4"></i> POR QUE A ECOPRIMER?</div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Nossa Credibilidade é Edificada em <span class="green-gradient-text">Resultados</span></h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="glass-card p-6 rounded-2xl border-zinc-800 space-y-4 reveal"><div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center"><i data-lucide="shield-check" class="w-6 h-6"></i></div><h3 class="text-lg font-bold text-white">Materiais de Qualidade</h3><p class="text-xs text-zinc-400 leading-relaxed">Insumos de marcas reconhecidas, com procedência verificada e garantia.</p></div>
+      <div class="glass-card p-6 rounded-2xl border-zinc-800 space-y-4 reveal"><div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center"><i data-lucide="clock" class="w-6 h-6"></i></div><h3 class="text-lg font-bold text-white">Prazo Rigoroso</h3><p class="text-xs text-zinc-400 leading-relaxed">Cronograma em contrato com cláusula de garantia de entrega.</p></div>
+      <div class="glass-card p-6 rounded-2xl border-zinc-800 space-y-4 reveal"><div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center"><i data-lucide="smartphone" class="w-6 h-6"></i></div><h3 class="text-lg font-bold text-white">Gestão Digital da Obra</h3><p class="text-xs text-zinc-400 leading-relaxed">Acompanhe o avanço em tempo real com relatórios semanais.</p></div>
+      <div class="glass-card p-6 rounded-2xl border-zinc-800 space-y-4 reveal"><div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center"><i data-lucide="wallet" class="w-6 h-6"></i></div><h3 class="text-lg font-bold text-white">Orçamento Transparente</h3><p class="text-xs text-zinc-400 leading-relaxed">Sem surpresas: valores fechados e detalhados em contrato.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="py-24 bg-brand-dark border-t border-zinc-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto space-y-4 mb-16 reveal">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-950/50 text-amber-400 text-xs font-semibold border border-amber-500/30"><i data-lucide="star" class="w-4 h-4 fill-amber-400"></i> 4.9/5 · +127 AVALIAÇÕES</div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">A Confiança de Quem Construiu com a <span class="gold-gradient-text">EcoPrimer</span></h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="glass-card p-8 rounded-2xl reveal"><div class="flex text-amber-400 gap-1 mb-4"><i data-lucide="star" class="w-4 h-4 fill-amber-400"></i><i data-lucide="star" class="w-4 h-4 fill-amber-400"></i><i data-lucide="star" class="w-4 h-4 fill-amber-400"></i><i data-lucide="star" class="w-4 h-4 fill-amber-400"></i><i data-lucide="star" class="w-4 h-4 fill-amber-400"></i></div><p class="text-zinc-300 text-sm italic leading-relaxed mb-6">"A EcoPrimer superou todas as expectativas. Entregaram a residência antes do prazo e o acabamento é impecável!"</p><div class="pt-6 border-t border-zinc-800 flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 font-bold">RC</div><div><div class="text-sm font-bold text-white">Dr. Ricardo Carvalho</div><div class="text-xs text-zinc-400">Casa Residencial</div></div></div></div>
+      <div class="glass-card p-8 rounded-2xl reveal"><div class="flex text-amber-400 gap-1 mb-4"><i data-lucide="star" class="w-4 h-4 fill-amber-400"></i><i data-lucide="star" class="w-4 h-4 fill-amber-400"></i><i data-lucide="star" class="w-4 h-4 fill-amber-400"></i><i data-lucide="star" class="w-4 h-4 fill-amber-400"></i><i data-lucide="star" class="w-4 h-4 fill-amber-400"></i></div><p class="text-zinc-300 text-sm italic leading-relaxed mb-6">"Fizeram a reforma completa do nosso hotel. Transparência nos relatórios semanais trouxe total paz de espírito."</p><div class="pt-6 border-t border-zinc-800 flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-400 font-bold">MS</div><div><div class="text-sm font-bold text-white">Mariana Silveira</div><div class="text-xs text-zinc-400">Hotel Botanique</div></div></div></div>
+      <div class="glass-card p-8 rounded-2xl reveal"><div class="flex text-amber-400 gap-1 mb-4"><i data-lucide="star" class="w-4 h-4 fill-amber-400"></i><i data-lucide="star" class="w-4 h-4 fill-amber-400"></i><i data-lucide="star" class="w-4 h-4 fill-amber-400"></i><i data-lucide="star" class="w-4 h-4 fill-amber-400"></i><i data-lucide="star" class="w-4 h-4 fill-amber-400"></i></div><p class="text-zinc-300 text-sm italic leading-relaxed mb-6">"Construção em Steel Frame perfeita! Sem sujeira excessiva, sem estouro de orçamento. Equipe extremamente qualificada."</p><div class="pt-6 border-t border-zinc-800 flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 font-bold">AL</div><div><div class="text-sm font-bold text-white">Eng. André Lima</div><div class="text-xs text-zinc-400">Cliente Residencial</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-24 bg-zinc-950 border-t border-zinc-900">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto space-y-4 mb-14 reveal">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/60 text-emerald-400 text-xs font-semibold border border-emerald-500/30"><i data-lucide="help-circle" class="w-4 h-4"></i> PERGUNTAS FREQUENTES</div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Tirando suas <span class="green-gradient-text">dúvidas</span></h2>
+    </div>
+    <div class="space-y-3">
+      <details class="glass-card rounded-xl p-5 group"><summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-white text-sm sm:text-base">Vocês fazem qualquer tipo de obra?<i data-lucide="plus" class="w-5 h-5 text-emerald-400 transition-transform group-open:rotate-45"></i></summary><p class="text-zinc-400 text-sm mt-3 leading-relaxed">Sim. Atuamos em construção residencial, comercial e industrial, reformas completas, ampliações, retrofit e manutenção. Do pequeno ao grande porte.</p></details>
+      <details class="glass-card rounded-xl p-5 group"><summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-white text-sm sm:text-base">Quanto custa construir ou reformar?<i data-lucide="plus" class="w-5 h-5 text-emerald-400 transition-transform group-open:rotate-45"></i></summary><p class="text-zinc-400 text-sm mt-3 leading-relaxed">O valor varia conforme metragem, tipo de obra, terreno e nível de acabamento. Enviamos orçamento gratuito, detalhado e sem compromisso em até 24h.</p></details>
+      <details class="glass-card rounded-xl p-5 group"><summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-white text-sm sm:text-base">Qual o prazo médio de uma obra?<i data-lucide="plus" class="w-5 h-5 text-emerald-400 transition-transform group-open:rotate-45"></i></summary><p class="text-zinc-400 text-sm mt-3 leading-relaxed">Reformas rápidas: 30 a 90 dias. Residências em Steel Frame: 90 a 150 dias. Obras em alvenaria: 8 a 14 meses. Todo cronograma é definido em contrato.</p></details>
+      <details class="glass-card rounded-xl p-5 group"><summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-white text-sm sm:text-base">A EcoPrimer atende em todo o Brasil?<i data-lucide="plus" class="w-5 h-5 text-emerald-400 transition-transform group-open:rotate-45"></i></summary><p class="text-zinc-400 text-sm mt-3 leading-relaxed">Sim! Atuamos em todo o território nacional, com equipes técnicas regionais e gestão centralizada.</p></details>
+      <details class="glass-card rounded-xl p-5 group"><summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-white text-sm sm:text-base">Como funciona a garantia da obra?<i data-lucide="plus" class="w-5 h-5 text-emerald-400 transition-transform group-open:rotate-45"></i></summary><p class="text-zinc-400 text-sm mt-3 leading-relaxed">Oferecemos garantia estrutural de 10 anos e garantia técnica de 5 anos para instalações elétricas, hidráulicas e sistemas.</p></details>
+      <details class="glass-card rounded-xl p-5 group"><summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-white text-sm sm:text-base">Vocês cuidam da aprovação em prefeitura?<i data-lucide="plus" class="w-5 h-5 text-emerald-400 transition-transform group-open:rotate-45"></i></summary><p class="text-zinc-400 text-sm mt-3 leading-relaxed">Sim. Nossa equipe cuida de toda a documentação técnica, aprovações em prefeitura, ART no CREA e demais trâmites legais.</p></details>
+      <details class="glass-card rounded-xl p-5 group"><summary class="flex items-center justify-between cursor-pointer list-none font-semibold text-white text-sm sm:text-base">É possível financiar o projeto?<i data-lucide="plus" class="w-5 h-5 text-emerald-400 transition-transform group-open:rotate-45"></i></summary><p class="text-zinc-400 text-sm mt-3 leading-relaxed">Sim. Trabalhamos com Construcard, financiamento bancário, linhas de crédito específicas e parcelamento direto conforme o porte da obra.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ORÇAMENTO / CONTATO -->
+<section id="orcamento" class="py-24 bg-brand-dark">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      <div class="lg:col-span-5 space-y-8 reveal" id="contato">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/60 text-emerald-400 text-xs font-semibold border border-emerald-500/30 mb-4"><i data-lucide="send" class="w-4 h-4"></i> FALE CONOSCO</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Pronto para começar sua <span class="green-gradient-text">obra ou reforma</span>?</h2>
+          <p class="text-zinc-400 text-sm mt-3 font-light leading-relaxed">Nossa equipe técnica está pronta para analisar seu projeto, terreno ou imóvel a reformar — e oferecer a melhor solução em prazo e custo-benefício.</p>
+        </div>
+        <div class="space-y-4">
+          <a href="https://wa.me/5527999230084?text=Ol%C3%A1!%20Vim%20pelo%20site." target="_blank" rel="noopener noreferrer" class="glass-card p-4 rounded-xl flex items-center gap-4 border-emerald-500/30">
+            <div class="p-3 bg-emerald-500/20 text-emerald-400 rounded-lg"><i data-lucide="message-circle" class="w-6 h-6"></i></div>
+            <div><div class="text-xs text-zinc-400">WhatsApp Direto</div><div class="text-sm font-bold text-white">(27) 99923-0084</div></div>
+          </a>
+          <a href="https://instagram.com/ecoprimerconstrucoes" target="_blank" rel="noopener noreferrer" class="glass-card p-4 rounded-xl flex items-center gap-4">
+            <div class="p-3 bg-gradient-to-tr from-amber-500 to-emerald-500 rounded-lg text-white"><i data-lucide="instagram" class="w-6 h-6"></i></div>
+            <div><div class="text-xs text-zinc-400">Siga no Instagram</div><div class="text-sm font-bold text-white">@ecoprimerconstrucoes</div></div>
+          </a>
+          <div class="glass-card p-4 rounded-xl flex items-center gap-4"><div class="p-3 bg-emerald-500/20 text-emerald-400 rounded-lg"><i data-lucide="mail" class="w-6 h-6"></i></div><div><div class="text-xs text-zinc-400">E-mail Comercial</div><div class="text-sm font-bold text-white">contato@ecoprimer.com.br</div></div></div>
+          <div class="glass-card p-4 rounded-xl flex items-center gap-4"><div class="p-3 bg-amber-500/20 text-amber-400 rounded-lg"><i data-lucide="map-pin" class="w-6 h-6"></i></div><div><div class="text-xs text-zinc-400">Atendimento Nacional</div><div class="text-sm font-bold text-white">Sede & Projetos de Engenharia</div></div></div>
+        </div>
+        <div class="glass-card p-6 rounded-2xl border-emerald-500/30 bg-gradient-to-r from-emerald-950/40 to-transparent">
+          <div class="flex items-center gap-3 mb-2"><i data-lucide="message-circle" class="w-6 h-6 text-emerald-400"></i><span class="font-bold text-white text-sm">Atendimento Imediato via WhatsApp</span></div>
+          <p class="text-xs text-zinc-400 mb-4">Tire dúvidas rápidas com nosso departamento técnico — resposta em minutos.</p>
+          <a href="https://wa.me/5527999230084?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full py-3 rounded-xl text-sm font-bold text-white bg-emerald-600 hover:bg-emerald-500 transition-colors">
+            <i data-lucide="message-circle" class="w-4 h-4 mr-2"></i>Falar no WhatsApp (27) 99923-0084
+          </a>
+        </div>
+      </div>
+      <div class="lg:col-span-7 reveal">
+        <div class="glass-card p-8 sm:p-10 rounded-3xl border-emerald-500/20 shadow-2xl">
+          <div class="mb-6">
+            <h3 class="text-xl font-bold text-white">Simulação & Solicitação de Orçamento</h3>
+            <p class="text-xs text-zinc-400 mt-1">Preencha — resposta em até 24h.</p>
+          </div>
+          <form id="quoteForm" novalidate class="space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div><label for="nome" class="block text-xs font-semibold text-zinc-300 mb-2">Nome Completo *</label><input id="nome" name="nome" type="text" required autocomplete="name" placeholder="Seu nome" class="w-full px-4 py-3 rounded-xl bg-zinc-900/80 border border-zinc-700 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-emerald-500 transition-colors"></div>
+              <div><label for="tel" class="block text-xs font-semibold text-zinc-300 mb-2">WhatsApp / Telefone *</label><input id="tel" name="tel" type="tel" required autocomplete="tel" inputmode="numeric" placeholder="(00) 00000-0000" class="w-full px-4 py-3 rounded-xl bg-zinc-900/80 border border-zinc-700 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-emerald-500 transition-colors"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div><label for="email" class="block text-xs font-semibold text-zinc-300 mb-2">E-mail *</label><input id="email" name="email" type="email" required autocomplete="email" placeholder="seu@email.com" class="w-full px-4 py-3 rounded-xl bg-zinc-900/80 border border-zinc-700 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-emerald-500 transition-colors"></div>
+              <div><label for="tipo" class="block text-xs font-semibold text-zinc-300 mb-2">Tipo de Serviço</label><select id="tipo" name="tipo" class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-white text-sm focus:outline-none focus:border-emerald-500 transition-colors"><option value="construcao-residencial">Construção Residencial</option><option value="construcao-comercial">Construção Comercial / Industrial</option><option value="reforma">Reforma / Ampliação</option><option value="projeto">Projeto Arquitetônico / Engenharia</option><option value="solar">Energia Solar</option><option value="outro">Outros</option></select></div>
+            </div>
+            <div><label for="areaRange" class="block text-xs font-semibold text-zinc-300 mb-2">Área Estimada (m²)</label><div class="flex items-center gap-4"><input type="range" id="areaRange" name="area" min="50" max="1000" step="10" value="200" class="w-full accent-emerald-500 bg-zinc-800"><span id="areaDisplay" class="text-sm font-bold text-emerald-400 min-w-[70px] text-right">200 m²</span></div></div>
+            <div><label for="msg" class="block text-xs font-semibold text-zinc-300 mb-2">Detalhes da Obra / Mensagem</label><textarea id="msg" name="msg" rows="4" placeholder="Conte-nos sobre localização, prazos ou particularidades do terreno/imóvel..." class="w-full px-4 py-3 rounded-xl bg-zinc-900/80 border border-zinc-700 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-emerald-500 transition-colors"></textarea></div>
+            <button type="submit" class="w-full py-4 rounded-xl font-bold text-white bg-gradient-to-r from-emerald-600 via-emerald-500 to-emerald-600 shadow-glow-green transition-all flex items-center justify-center gap-2"><i data-lucide="send" class="w-4 h-4"></i>Quero Receber Meu Orçamento</button>
+            <p class="text-[11px] text-center text-zinc-500"><i data-lucide="lock" class="w-3 h-3 inline mr-1"></i> Seus dados estão seguros.</p>
+          </form>
+          <div id="formFeedback" role="status" class="hidden mt-4 p-4 rounded-xl bg-emerald-950/80 border border-emerald-500 text-emerald-300 text-sm text-center">
+            <i data-lucide="check-circle" class="w-6 h-6 mx-auto mb-2 text-emerald-400"></i>
+            Obrigado! Recebemos sua solicitação. Nossa equipe entrará em contato em breve pelo WhatsApp.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-zinc-950 border-t border-zinc-900 pt-16 pb-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-zinc-900">
+      <div class="lg:col-span-2 space-y-4">
+        <a href="#inicio" class="flex items-center gap-3"><div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-950 via-brand-card to-zinc-900 border border-emerald-500/40 p-2 flex items-center justify-center"><i data-lucide="home" class="w-5 h-5 text-emerald-400"></i></div><div class="flex flex-col"><span class="text-xl font-extrabold text-white">ECO<span class="gold-gradient-text">PRIMER</span></span><span class="text-[9px] tracking-widest text-emerald-400 font-semibold uppercase -mt-1">CONSTRUÇÕES</span></div></a>
+        <p class="text-xs text-zinc-400 leading-relaxed max-w-sm">Construtora completa especializada em construção, reforma e obras em geral — residenciais, comerciais e industriais.</p>
+        <div class="flex items-center gap-3 pt-2">
+          <a href="https://wa.me/5527999230084" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-9 h-9 rounded-lg glass-card flex items-center justify-center text-zinc-400"><i data-lucide="message-circle" class="w-4 h-4"></i></a>
+          <a href="https://instagram.com/ecoprimerconstrucoes" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded-lg glass-card flex items-center justify-center text-zinc-400"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+          <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-lg glass-card flex items-center justify-center text-zinc-400"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+        </div>
+      </div>
+      <div class="space-y-3"><h4 class="text-sm font-bold text-white uppercase tracking-wider">Navegação</h4><ul class="space-y-2 text-xs text-zinc-400"><li><a href="#inicio" class="hover:text-emerald-400">Início</a></li><li><a href="#sobre" class="hover:text-emerald-400">Sobre</a></li><li><a href="#servicos" class="hover:text-emerald-400">Serviços</a></li><li><a href="#projetos" class="hover:text-emerald-400">Portfólio</a></li><li><a href="#faq" class="hover:text-emerald-400">FAQ</a></li></ul></div>
+      <div class="space-y-3"><h4 class="text-sm font-bold text-white uppercase tracking-wider">Serviços</h4><ul class="space-y-2 text-xs text-zinc-400"><li><a href="#servicos" class="hover:text-emerald-400">Construção Residencial</a></li><li><a href="#servicos" class="hover:text-emerald-400">Obras Comerciais</a></li><li><a href="#servicos" class="hover:text-emerald-400">Obras Industriais</a></li><li><a href="#servicos" class="hover:text-emerald-400">Reformas & Ampliações</a></li><li><a href="#servicos" class="hover:text-emerald-400">Projetos & Engenharia</a></li></ul></div>
+      <div class="space-y-3"><h4 class="text-sm font-bold text-white uppercase tracking-wider">Atendimento</h4><ul class="space-y-2 text-xs text-zinc-400"><li class="flex items-center gap-2"><i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-400"></i> <a href="https://wa.me/5527999230084" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400">(27) 99923-0084</a></li><li class="flex items-center gap-2"><i data-lucide="instagram" class="w-3.5 h-3.5 text-amber-400"></i> @ecoprimerconstrucoes</li><li class="flex items-center gap-2"><i data-lucide="mail" class="w-3.5 h-3.5 text-emerald-400"></i> contato@ecoprimer.com.br</li><li class="flex items-center gap-2"><i data-lucide="clock" class="w-3.5 h-3.5 text-emerald-400"></i> Seg - Sex: 08:00 - 18:00</li></ul></div>
+    </div>
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+      <div>© <span id="year"></span> ECOPRIMER CONSTRUÇÕES. Todos os direitos reservados.</div>
+      <div class="flex items-center gap-6"><a href="#" class="hover:text-zinc-300">Termos de Uso</a><a href="#" class="hover:text-zinc-300">Política de Privacidade</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/5527999230084?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20EcoPrimer%20e%20quero%20um%20or%C3%A7amento."
+   target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp (27) 99923-0084"
+   class="fixed bottom-6 right-6 z-50 p-4 rounded-full bg-emerald-500 text-white shadow-glow-green hover:bg-emerald-400 hover:scale-110 transition-all wa-pulse">
+  <i data-lucide="message-circle" class="w-7 h-7"></i>
+</a>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.lucide) lucide.createIcons();
+    const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+
+    const btn = document.getElementById('mobileMenuBtn');
+    const menu = document.getElementById('mobileMenu');
+    const icon = document.getElementById('menuIcon');
+    const toggleMenu = (open) => {
+      menu.classList.toggle('hidden', !open);
+      btn.setAttribute('aria-expanded', String(open));
+      if (icon) { icon.setAttribute('data-lucide', open ? 'x' : 'menu'); lucide.createIcons(); }
+    };
+    btn?.addEventListener('click', () => toggleMenu(menu.classList.contains('hidden')));
+    document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => toggleMenu(false)));
+
+    const navbar = document.getElementById('navbar');
+    const onScroll = () => navbar.classList.toggle('is-scrolled', window.scrollY > 30);
+    window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+    const areaRange = document.getElementById('areaRange');
+    const areaDisplay = document.getElementById('areaDisplay');
+    areaRange?.addEventListener('input', (e) => { areaDisplay.textContent = e.target.value + ' m²'; });
+
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const projectItems = document.querySelectorAll('.project-item');
+    tabBtns.forEach(b => b.addEventListener('click', () => {
+      tabBtns.forEach(x => { x.classList.remove('bg-emerald-600','text-white','shadow-glow-green'); x.classList.add('glass-card','text-zinc-400'); });
+      b.classList.add('bg-emerald-600','text-white','shadow-glow-green'); b.classList.remove('glass-card','text-zinc-400');
+      const f = b.dataset.filter;
+      projectItems.forEach(it => { it.style.display = (f === 'all' || it.classList.contains(f)) ? 'block' : 'none'; });
+    }));
+
+    const tel = document.getElementById('tel');
+    tel?.addEventListener('input', (e) => {
+      let v = e.target.value.replace(/\D/g, '').slice(0, 11);
+      if (v.length > 10)      v = v.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+      else if (v.length > 6)  v = v.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+      else if (v.length > 2)  v = v.replace(/(\d{2})(\d{0,5})/, '($1) $2');
+      else if (v.length > 0)  v = v.replace(/(\d{0,2})/, '($1');
+      e.target.value = v;
+    });
+
+    const inputs = document.querySelectorAll('#quoteForm input[required], #quoteForm textarea[required]');
+    inputs.forEach(el => el.addEventListener('blur', () => {
+      const ok = el.checkValidity() && el.value.trim() !== '';
+      el.classList.toggle('field-invalid', !ok && el.value !== '');
+      el.classList.toggle('field-valid', ok);
+    }));
+
+    // Ao enviar o formulário, abre o WhatsApp com os dados preenchidos
+    const form = document.getElementById('quoteForm');
+    const feedback = document.getElementById('formFeedback');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+
+      const nome = document.getElementById('nome').value.trim();
+      const telCliente = document.getElementById('tel').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const tipo = document.getElementById('tipo').value;
+      const area = document.getElementById('areaRange').value;
+      const msg = document.getElementById('msg').value.trim();
+
+      const tipoTexto = {
+        'construcao-residencial': 'Construção Residencial',
+        'construcao-comercial': 'Construção Comercial / Industrial',
+        'reforma': 'Reforma / Ampliação',
+        'projeto': 'Projeto Arquitetônico / Engenharia',
+        'solar': 'Energia Solar',
+        'outro': 'Outros'
+      }[tipo] || tipo;
+
+      const texto =
+        `*Nova solicitação de orçamento - Site EcoPrimer*%0A%0A` +
+        `*Nome:* ${encodeURIComponent(nome)}%0A` +
+        `*WhatsApp:* ${encodeURIComponent(telCliente)}%0A` +
+        `*E-mail:* ${encodeURIComponent(email)}%0A` +
+        `*Tipo de serviço:* ${encodeURIComponent(tipoTexto)}%0A` +
+        `*Área estimada:* ${area} m²%0A` +
+        (msg ? `*Detalhes:* ${encodeURIComponent(msg)}` : '');
+
+      window.open(`https://wa.me/5527999230084?text=${texto}`, '_blank');
+
+      form.reset();
+      if (areaDisplay) areaDisplay.textContent = '200 m²';
+      inputs.forEach(i => i.classList.remove('field-valid', 'field-invalid'));
+      feedback.classList.remove('hidden');
+      feedback.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(() => feedback.classList.add('hidden'), 6000);
+    });
+
+    const reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('is-visible'); io.unobserve(en.target); } });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      reveals.forEach(el => io.observe(el));
+    } else { reveals.forEach(el => el.classList.add('is-visible')); }
+    lucide.createIcons();
+  });
+</script>
+</body>
+</html>
